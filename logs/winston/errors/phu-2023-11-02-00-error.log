@@ -1,0 +1,175 @@
+{
+  cause: Error: connect ETIMEDOUT 100.26.30.37:27017
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16) {
+    errno: -4039,
+    code: 'ETIMEDOUT',
+    syscall: 'connect',
+    address: '100.26.30.37',
+    port: 27017
+  },
+  connectionGeneration: 0,
+  level: 'error',
+  message: 'Failed to connect Database connect ETIMEDOUT 100.26.30.37:27017',
+  stack: 'MongoNetworkError: connect ETIMEDOUT 100.26.30.37:27017\n' +
+    '    at connectionFailureError (F:\\Next Level Development\\university-management-auth-service-back-end\\node_modules\\mongodb\\src\\cmap\\connect.ts:493:14)\n' +
+    '    at TLSSocket.<anonymous> (F:\\Next Level Development\\university-management-auth-service-back-end\\node_modules\\mongodb\\src\\cmap\\connect.ts:394:16)\n' +
+    '    at Object.onceWrapper (node:events:642:26)\n' +
+    '    at TLSSocket.emit (node:events:527:28)\n' +
+    '    at emitErrorNT (node:internal/streams/destroy:157:8)\n' +
+    '    at emitErrorCloseNT (node:internal/streams/destroy:122:3)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:83:21)',
+  label: 'PH',
+  timestamp: '2023-11-01T18:18:31.847Z',
+  [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+}
+{
+  message: 'Failed to connect Database Server selection timed out after 30000 ms',
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-bghcpaa-shard-00-00.rpyrqsl.mongodb.net:27017' => ServerDescription {
+        address: 'ac-bghcpaa-shard-00-00.rpyrqsl.mongodb.net:27017',
+        type: 'RSSecondary',
+        hosts: [
+          'ac-bghcpaa-shard-00-00.rpyrqsl.mongodb.net:27017',
+          'ac-bghcpaa-shard-00-01.rpyrqsl.mongodb.net:27017',
+          'ac-bghcpaa-shard-00-02.rpyrqsl.mongodb.net:27017'
+        ],
+        passives: [],
+        arbiters: [],
+        tags: {
+          provider: 'AWS',
+          nodeType: 'ELECTABLE',
+          workloadType: 'OPERATIONAL',
+          region: 'US_EAST_1'
+        },
+        minWireVersion: 0,
+        maxWireVersion: 17,
+        roundTripTime: 2326.0800000000004,
+        lastUpdateTime: 13966822,
+        lastWriteDate: 2023-11-01T18:19:35.000Z,
+        error: null,
+        topologyVersion: {
+          processId: new ObjectId("6542549614c717487bfa7c72"),
+          counter: 4
+        },
+        setName: 'atlas-hk6nsy-shard-0',
+        setVersion: 8,
+        electionId: null,
+        logicalSessionTimeoutMinutes: 30,
+        primary: 'ac-bghcpaa-shard-00-01.rpyrqsl.mongodb.net:27017',
+        me: 'ac-bghcpaa-shard-00-00.rpyrqsl.mongodb.net:27017',
+        '$clusterTime': {
+          clusterTime: new Timestamp({ t: 1698862775, i: 1 }),
+          signature: {
+            hash: Binary.createFromBase64("nmSvYR17HozTA0TwBSxpudNfCuc=", 0),
+            keyId: new Long("7255382657066860546")
+          }
+        }
+      },
+      'ac-bghcpaa-shard-00-01.rpyrqsl.mongodb.net:27017' => ServerDescription {
+        address: 'ac-bghcpaa-shard-00-01.rpyrqsl.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 13944398,
+        lastWriteDate: 0,
+        error: null,
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-bghcpaa-shard-00-02.rpyrqsl.mongodb.net:27017' => ServerDescription {
+        address: 'ac-bghcpaa-shard-00-02.rpyrqsl.mongodb.net:27017',
+        type: 'RSSecondary',
+        hosts: [
+          'ac-bghcpaa-shard-00-00.rpyrqsl.mongodb.net:27017',
+          'ac-bghcpaa-shard-00-01.rpyrqsl.mongodb.net:27017',
+          'ac-bghcpaa-shard-00-02.rpyrqsl.mongodb.net:27017'
+        ],
+        passives: [],
+        arbiters: [],
+        tags: {
+          region: 'US_EAST_1',
+          workloadType: 'OPERATIONAL',
+          nodeType: 'ELECTABLE',
+          provider: 'AWS'
+        },
+        minWireVersion: 0,
+        maxWireVersion: 17,
+        roundTripTime: 976,
+        lastUpdateTime: 13966805,
+        lastWriteDate: 2023-11-01T18:19:34.000Z,
+        error: null,
+        topologyVersion: {
+          processId: new ObjectId("65425699ea3185341b3fb8e7"),
+          counter: 3
+        },
+        setName: 'atlas-hk6nsy-shard-0',
+        setVersion: 8,
+        electionId: null,
+        logicalSessionTimeoutMinutes: 30,
+        primary: 'ac-bghcpaa-shard-00-01.rpyrqsl.mongodb.net:27017',
+        me: 'ac-bghcpaa-shard-00-02.rpyrqsl.mongodb.net:27017',
+        '$clusterTime': {
+          clusterTime: new Timestamp({ t: 1698862774, i: 17 }),
+          signature: {
+            hash: Binary.createFromBase64("eHGa4A+PIkPFGPRLLmeEN7+IbY4=", 0),
+            keyId: new Long("7255382657066860546")
+          }
+        }
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-hk6nsy-shard-0',
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: 30
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError: Server selection timed out after 30000 ms\n' +
+    '    at _handleConnectionErrors (F:\\Next Level Development\\university-management-auth-service-back-end\\node_modules\\mongoose\\lib\\connection.js:805:11)\n' +
+    '    at NativeConnection.openUri (F:\\Next Level Development\\university-management-auth-service-back-end\\node_modules\\mongoose\\lib\\connection.js:780:11)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:96:5)',
+  label: 'PH',
+  timestamp: '2023-11-01T18:19:42.654Z'
+}
+{
+  cause: Error: connect ETIMEDOUT 100.26.30.37:27017
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16) {
+    errno: -4039,
+    code: 'ETIMEDOUT',
+    syscall: 'connect',
+    address: '100.26.30.37',
+    port: 27017
+  },
+  connectionGeneration: 0,
+  level: 'error',
+  message: 'Failed to connect Database connect ETIMEDOUT 100.26.30.37:27017',
+  stack: 'MongoNetworkError: connect ETIMEDOUT 100.26.30.37:27017\n' +
+    '    at connectionFailureError (F:\\Next Level Development\\university-management-auth-service-back-end\\node_modules\\mongodb\\src\\cmap\\connect.ts:493:14)\n' +
+    '    at TLSSocket.<anonymous> (F:\\Next Level Development\\university-management-auth-service-back-end\\node_modules\\mongodb\\src\\cmap\\connect.ts:394:16)\n' +
+    '    at Object.onceWrapper (node:events:642:26)\n' +
+    '    at TLSSocket.emit (node:events:527:28)\n' +
+    '    at emitErrorNT (node:internal/streams/destroy:157:8)\n' +
+    '    at emitErrorCloseNT (node:internal/streams/destroy:122:3)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:83:21)',
+  label: 'PH',
+  timestamp: '2023-11-01T18:20:11.081Z',
+  [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+}

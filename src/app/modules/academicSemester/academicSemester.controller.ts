@@ -15,7 +15,7 @@ const createSemester = catchAsync(async (req: Request, res: Response) => {
   const result =
     await AcademicSemesterService.createSemester(academicSemesterData);
 
-  sendResponse(res, {
+  sendResponse<IAcademicSemester>(res, {
     statusCode: httpStatus.OK,
     success: true,
     message: 'Academic Semester created Successfully!',

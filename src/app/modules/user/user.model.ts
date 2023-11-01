@@ -1,5 +1,8 @@
 import { Schema, model } from 'mongoose';
 import { IUser, UserModel } from './user.interface';
+import { Admin } from '../admin/admin.model';
+import { Faculty } from '../faculty/faculty.model';
+import { Student } from '../student/student.model';
 
 const userSchema = new Schema<IUser>(
   {
@@ -18,16 +21,16 @@ const userSchema = new Schema<IUser>(
     },
     student: {
       type: Schema.Types.ObjectId,
-      ref: 'Student',
+      ref: Student,
     },
     faculty: {
       type: Schema.Types.ObjectId,
-      ref: 'Faculty',
+      ref: Faculty,
     },
-    // admin: {
-    //   type: Schema.Types.ObjectId,
-    //   ref: 'Admin'
-    // },
+    admin: {
+      type: Schema.Types.ObjectId,
+      ref: Admin,
+    },
   },
   {
     timestamps: true,
